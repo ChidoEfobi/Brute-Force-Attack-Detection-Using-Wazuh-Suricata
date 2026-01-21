@@ -1,38 +1,13 @@
 # Brute-Force Attack Detection Using Wazuh & Suricata (SOC Simulation)
-<div>
  Open-Source SOC | SIEM • IDS • IDR • XDR Simulation
-</div>
---
+
+
 
 This lab simulates a real-world brute-force attack where a Kali Linux attacker uses Hydra against a Linux host. Suricata detects it via Emerging Threats rules, and Wazuh SIEM correlates alerts, showing how an open-source SOC stack provides full visibility, rule-based detection, and centralized alerting (MITRE T1110).
 
 
 
-
-        [ kalichido ]
-      Kali Linux Attacker
-       (Hydra Brute Force)
-               |
-               |  SSH Login Attempts
-               v
- ┌─────────────────────────────┐
- |  wazuhagent-suricata        |
- |  Linux Victim Endpoint      |
- |  - Suricata (ET Rules)      |
- |  - Wazuh Agent              |
- └─────────────────────────────┘
-               |
-               |  Security Events / Alerts
-               v
- ┌─────────────────────────────┐
- |  Ubuntuwazserver            |
- |  Wazuh Server (SIEM)        |
- |  - Log Correlation          |
- |  - Alerting & Dashboards   |
- └─────────────────────────────┘
-
-
-📌 Project Overview
+# Project Overview
 This project demonstrates a realistic SOC detection scenario where a Kali Linux attacker (kalichido) launches a credential brute-force attack using Hydra against a monitored Linux endpoint named wazuhagent-suricata.
 The attack is successfully detected, logged, correlated, and visualized using a fully open-source SOC stack consisting of:
     • Wazuh (SIEM / HIDS / IDR)
@@ -40,21 +15,21 @@ The attack is successfully detected, logged, correlated, and visualized using a 
     • Emerging Threats ruleset
 All alerts are centralized and analyzed on the Wazuh SIEM server (Ubuntuwazserver), simulating real-world SOC operations.
 
-🧠 Architecture & Components
-🔴 Attacker
+## Architecture & Components
+# Attacker
     • Hostname: kalichido
     • OS: Kali Linux
     • Tool: Hydra
     • Technique: Brute-force authentication
     • MITRE ATT&CK: T1110 – Brute Force
-🔵 Victim
+# Victim
     • Hostname: wazuhagent-suricata
     • OS: Linux (Ubuntu)
     • Security Stack:
         ◦ Wazuh Agent (HIDS)
         ◦ Suricata (NIDS)
     • Role: Endpoint under attack and detection sensor
-🟦 SOC / SIEM Server
+# SOC / SIEM Server
     • Hostname: Ubuntuwazserver
     • OS: Ubuntu Server
     • Role:
