@@ -1,0 +1,21 @@
+        [ kalichido ]
+      Kali Linux Attacker
+     (Hydra Brute Force)
+              |
+              |  SSH Login Attempts
+              v
+ ┌─────────────────────────────┐
+ |  wazuhagent-suricata        |
+ |  Linux Victim Endpoint      |
+ |  - Suricata (ET Rules)      |
+ |  - Wazuh Agent              |
+ └─────────────────────────────┘
+              |
+              |  Security Events / Alerts
+              v
+ ┌─────────────────────────────┐
+ |  Ubuntuwazserver            |
+ |  Wazuh Server (SIEM)        |
+ |  - Log Correlation          |
+ |  - Alerting & Dashboards    |
+ └─────────────────────────────┘
