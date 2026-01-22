@@ -1,52 +1,65 @@
+# SOC Lab Environment Overview   : Brute-Force Attack Detection Using Wazuh & Suricata (SOC Simulation)
+# Open-Source SIEM / IDR / XDR-Oriented Detection Scenario”
 
-# 📊 SOC Incident Detection & Response Report
+Security Monitoring & Testing Tools Used: Hydra, Suricata, Wazuh
 
-## 1. Executive Summary
-This report documents a simulated cyber attack detected and analyzed using **Wazuh SIEM** in a controlled SOC lab environment.
+By Chido Efobi
+<a href="https://www.linkedin.com/in/chido-efobi-95691143/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+
+
+# SOC Simulation Architecture”
+<img width="1024" height="1536" alt="SOC Lab Overview" src="https://github.com/user-attachments/assets/35d4fa3e-5e7f-4ad7-a828-7c50f3064a83" />
+
+
+
+---
+# Victim Endpoint Setup (Linux Endpoint: Wazuh Agent + Suricata)
+- Network and host-based telemetry integrated for SOC visibility
+Visual: Wazuh agent running (systemctl status wazuh-agent)
+Suricata running with ET rules loaded (suricata -c /etc/suricata/suricata.yaml), “Active ET Rules”
+
+# Wazuh Server Setup (Linux Endpoint: Wazuh manager + Wazuh indexer  + Wazuh dashboard)
+- Network and host-based telemetry integrated for SOC visibility
+Visual: Wazuh manager + Wazuh indexer  + Wazuh dashboard (systemctl status wazuh-manager, systemctl status wazuh-indexer, systemctl status wazuh-dashboard)
+picture of the server with its agents (home page)
+---
+# Attacker Setup (Kali Linux Attacker Configuration)
+- Hydra brute-force attack using common credentials
+Visual: Terminal screenshot mockup hydra -l root -P common-passwords.txt ssh://192.168.x.x
 
 ---
 
-## 2. Lab Setup
-Three virtual machines were deployed to simulate attacker, victim, and SOC infrastructure.
-
-![VM Setup](../screenshots/vms_running.png)
-
----
-
-## 3. Wazuh Installation
-The Wazuh SIEM server was installed in an all-in-one configuration.
-
-![Wazuh Dashboard](../screenshots/wazuh_dashboard.png)
+# Attack Execution (Hydra Brute-Force in Progress)
+Visual: Terminal on kali showing failed login attempts with one successful login
+Callouts:
 
 ---
 
-## 4. Agent Deployment
-The Wazuh agent was installed on the victim machine and successfully connected.
-
-![Agent Connected](../screenshots/agent_connected.png)
-
----
-
-## 5. Attack Simulation
-An SSH brute-force attack was launched from the attacker machine.
-
-![Attack Simulation](../screenshots/bruteforce_attack.png)
+# Wazuh Alert Correlation (Centralized SOC Monitoring)
+- Correlated alerts provide actionable SOC insights
+Visual: Wazuh dashboard mockup
+Alerts table: Source IP, event type, severity, Highlight severity and affected services
+Timeline graph: Attack attempts over time
+ Add MITRE ATT&CK tag: T1110 – Brute Force screenshots
 
 ---
 
-## 6. Alert Detection
-Wazuh generated alerts indicating multiple failed SSH login attempts.
-
-![Brute Force Alert](../screenshots/bruteforce_alert.png)
+# Suricata Detection (IDS Detection: Suricata Alerts)
+Visual: Suricata alert log screenshot, Show timestamps and source IP
 
 ---
 
-## 7. Incident Investigation
-The alert was investigated by analyzing authentication logs.
+# Threat Intelligence & Rules (Rule-Based Detection & Threat Intelligence)
+- Community-driven rules enable proactive detection
+Heading: 
+Visual: EMERGING THREATS rule snippet highlighted,Emphasize pattern recognition (SSH brute-force)
 
-![Incident Investigation](../screenshots/incident_investigation.png)
+----
 
----
+# Simulation Challenges (Lab Setup Observations)
+Visual: VMware network settings screenshot (NAT vs Bridged), Suricata permissions warning screenshot
+
+
 ## 7.1 Custom Detection & Automation
 
 In addition to Wazuh’s built-in detection rules, a custom Python script was developed to demonstrate
@@ -69,12 +82,13 @@ defense-in-depth within the SOC workflow.
 
 ---
 
-## 8. Response & Mitigation
+## Attack Summary & SOC Insights (Response & Mitigation)
+- Layered detection improves SOC effectiveness and visibility”
 The attacking IP was blocked and preventive controls were implemented.
 
 ![Mitigation](../screenshots/mitigation.png)
 
----
 
+---
 ## 9. Conclusion
 This project demonstrates practical SOC capabilities including detection, analysis, and response using Wazuh SIEM.
