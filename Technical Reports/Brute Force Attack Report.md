@@ -25,13 +25,14 @@ picture of the server with its agents (home page)
 ---
 # Attacker Setup (Kali Linux Attacker Configuration)
 - Hydra brute-force attack using common credentials
-Visual: Terminal screenshot mockup hydra -l root -P common-passwords.txt ssh://192.168.x.x
+Visual: screen shot of password and username command that hydra uses, Terminal screenshot mockup hydra -l root -P common-passwords.txt ssh://192.168.x.x
 
 ---
 
 # Attack Execution (Hydra Brute-Force in Progress)
-Visual: Terminal on kali showing failed login attempts with one successful login
-Callouts:
+See failed login attempts and one successful login
+<img width="950" height="466" alt="kali hydra brute force on suricata wazuh agent showing successful username and password" src="https://github.com/user-attachments/assets/a2df4015-9786-434d-b30f-735c45a4620d" />
+
 
 ---
 
@@ -41,6 +42,9 @@ Visual: Wazuh dashboard mockup
 Alerts table: Source IP, event type, severity, Highlight severity and affected services
 Timeline graph: Attack attempts over time
  Add MITRE ATT&CK tag: T1110 – Brute Force screenshots
+<img width="956" height="446" alt="wazuh server brute force output 2" src="https://github.com/user-attachments/assets/fab07ee5-63a1-4020-8ca7-2f63a16de373" />
+<img width="944" height="470" alt="wazuh server brute force output 3" src="https://github.com/user-attachments/assets/0339cfed-b0ee-49e3-a637-4ef1c787e556" />
+<img width="944" height="476" alt="wazuh server brute force output 4" src="https://github.com/user-attachments/assets/8210377f-52f8-4e20-8746-fbb9d5849288" />
 
 ---
 
@@ -60,7 +64,7 @@ Visual: EMERGING THREATS rule snippet highlighted,Emphasize pattern recognition 
 Visual: VMware network settings screenshot (NAT vs Bridged), Suricata permissions warning screenshot
 
 
-## 7.1 Custom Detection & Automation
+## Custom Detection & Automation
 
 In addition to Wazuh’s built-in detection rules, a custom Python script was developed to demonstrate
 how SOC analysts can automate log analysis and alert generation.
@@ -90,5 +94,5 @@ The attacking IP was blocked and preventive controls were implemented.
 
 
 ---
-## 9. Conclusion
+## Conclusion
 This project demonstrates practical SOC capabilities including detection, analysis, and response using Wazuh SIEM.
