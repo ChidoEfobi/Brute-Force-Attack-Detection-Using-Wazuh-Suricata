@@ -1,22 +1,20 @@
 # SOC Lab Environment Overview   : Brute-Force Attack Detection Using Wazuh & Suricata (SOC Simulation)
-# Open-Source SIEM / IDR / XDR-Oriented Detection Scenario
-
+---
+Open-Source SIEM / IDR / XDR-Oriented Detection Scenario
+---
 Security Monitoring & Testing Tools Used: Hydra, Suricata, Wazuh
 
 By Chido Efobi
-<a href="https://www.linkedin.com/in/chido-efobi-95691143/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-
-
-# SOC Simulation Architecture
-<img width="1024" height="1536" alt="SOC Lab Overview" src="https://github.com/user-attachments/assets/35d4fa3e-5e7f-4ad7-a828-7c50f3064a83" />
-
 
 
 ---
-Victim Endpoint Setup (Linux Endpoint: Wazuh Agent + Suricata)
-- Network and host-based telemetry integrated for SOC visibility
-Visual: Wazuh agent running (systemctl status wazuh-agent)
-Suricata running with ET rules loaded (suricata -c /etc/suricata/suricata.yaml), “Active ET Rules”
+<a href="https://www.linkedin.com/in/chido-efobi-95691143/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+
+
+# SOC Simulation Architecture & Configurations
+<img width="1024" height="1536" alt="SOC Lab Overview" src="https://github.com/user-attachments/assets/35d4fa3e-5e7f-4ad7-a828-7c50f3064a83" />
+
+
 
 ---
 Confirming the status of the wazuh-agent
@@ -58,34 +56,38 @@ Confirming the status of the wazuh-agent
 <img width="263" height="55" alt="ossec config 2" src="https://github.com/user-attachments/assets/247ae1bf-e865-435d-bbf1-f2b804d5a4cb" />
 
 ---
-#Confirm Suricata is active and running. 
+Confirm Suricata is active and running. 
 ---
 <img width="618" height="190" alt="confirm status suricata is now enabled and running " src="https://github.com/user-attachments/assets/6c78a598-1536-46d5-bd7a-87ccdb93289b" />
 
 
 
 ---
-# Attacker Setup (Kali Linux Attacker Configuration)
-- Hydra brute-force attack using common credentials
-Visual: screen shot of password and username command that hydra uses, Terminal screenshot mockup hydra -l root -P common-passwords.txt ssh://192.168.x.x
-
+# Attack Execution (Kali Linux Hydra Brute-Force Attack  in Progress)
 ---
-
-# Attack Execution (Hydra Brute-Force in Progress)
 See failed login attempts and one successful login
+---
 <img width="950" height="466" alt="kali hydra brute force on suricata wazuh agent showing successful username and password" src="https://github.com/user-attachments/assets/a2df4015-9786-434d-b30f-735c45a4620d" />
 
 
 ---
 
 # Wazuh Alert Correlation (Centralized SOC Monitoring)
-- Correlated alerts provide actionable SOC insights
+---
+Correlated alerts provide actionable SOC insights
+---
 Visual: Wazuh dashboard mockup
 Alerts table: Source IP, event type, severity, Highlight severity and affected services
 Timeline graph: Attack attempts over time
  Add MITRE ATT&CK tag: T1110 – Brute Force screenshots
+
+ ---
 <img width="956" height="446" alt="wazuh server brute force output 2" src="https://github.com/user-attachments/assets/fab07ee5-63a1-4020-8ca7-2f63a16de373" />
+
+---
 <img width="944" height="470" alt="wazuh server brute force output 3" src="https://github.com/user-attachments/assets/0339cfed-b0ee-49e3-a637-4ef1c787e556" />
+
+---
 <img width="944" height="476" alt="wazuh server brute force output 4" src="https://github.com/user-attachments/assets/8210377f-52f8-4e20-8746-fbb9d5849288" />
 
 ---
