@@ -1,5 +1,5 @@
 # SOC Lab Environment Overview   : Brute-Force Attack Detection Using Wazuh & Suricata (SOC Simulation)
-# Open-Source SIEM / IDR / XDR-Oriented Detection Scenario”
+# Open-Source SIEM / IDR / XDR-Oriented Detection Scenario
 
 Security Monitoring & Testing Tools Used: Hydra, Suricata, Wazuh
 
@@ -7,21 +7,63 @@ By Chido Efobi
 <a href="https://www.linkedin.com/in/chido-efobi-95691143/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
 
-# SOC Simulation Architecture”
+# SOC Simulation Architecture
 <img width="1024" height="1536" alt="SOC Lab Overview" src="https://github.com/user-attachments/assets/35d4fa3e-5e7f-4ad7-a828-7c50f3064a83" />
 
 
 
 ---
-# Victim Endpoint Setup (Linux Endpoint: Wazuh Agent + Suricata)
+Victim Endpoint Setup (Linux Endpoint: Wazuh Agent + Suricata)
 - Network and host-based telemetry integrated for SOC visibility
 Visual: Wazuh agent running (systemctl status wazuh-agent)
 Suricata running with ET rules loaded (suricata -c /etc/suricata/suricata.yaml), “Active ET Rules”
 
-# Wazuh Server Setup (Linux Endpoint: Wazuh manager + Wazuh indexer  + Wazuh dashboard)
-- Network and host-based telemetry integrated for SOC visibility
-Visual: Wazuh manager + Wazuh indexer  + Wazuh dashboard (systemctl status wazuh-manager, systemctl status wazuh-indexer, systemctl status wazuh-dashboard)
-picture of the server with its agents (home page)
+---
+Confirming the status of the wazuh-agent
+---
+<img width="696" height="376" alt="confirm wazuh agent is active  befor installing suricata 2" src="https://github.com/user-attachments/assets/6f46dc13-6afb-4c5c-91ef-75ce33507cb7" />
+
+
+---
+ Installing Suricata on this wazuh-agent
+---
+<img width="851" height="405" alt="suricata installation 1" src="https://github.com/user-attachments/assets/3aa19404-06ad-49c9-8fbd-1515ad0fe789" /> #
+<img width="854" height="326" alt="suricata installation 2" src="https://github.com/user-attachments/assets/da5b23c9-b1cc-49e7-bd64-4da8d1e222a8" />
+<img width="651" height="372" alt="suricata installation 3" src="https://github.com/user-attachments/assets/f78ac7d4-cd49-4971-b7b5-909e0044f49d" />
+
+---
+ Updating the yaml file with
+ ---
+<img width="527" height="32" alt="update suricata yaml file " src="https://github.com/user-attachments/assets/d9e5f8e6-42fa-4c33-90fe-374bcbd801df" />
+
+---
+<img width="280" height="152" alt="suricata yaml update 1" src="https://github.com/user-attachments/assets/1992d582-d7df-4050-bcb5-21bd0e47d480" />
+
+
+---
+<img width="373" height="45" alt="suricata yaml update 2" src="https://github.com/user-attachments/assets/45be8488-63fb-4719-8bda-7f5349efde8f" />
+
+
+---
+<img width="401" height="89" alt="suricata yaml update 3" src="https://github.com/user-attachments/assets/77f50ba8-3d70-45a2-8fc3-246ebd6dd90c" />
+
+
+
+---
+ Updating the ossec file with 
+---
+<img width="283" height="22" alt="ossec config 1" src="https://github.com/user-attachments/assets/d23a2b97-d6ae-42e3-9ba8-2a1b79f1a800" />
+
+---
+<img width="263" height="55" alt="ossec config 2" src="https://github.com/user-attachments/assets/247ae1bf-e865-435d-bbf1-f2b804d5a4cb" />
+
+---
+#Confirm Suricata is active and running. 
+---
+<img width="618" height="190" alt="confirm status suricata is now enabled and running " src="https://github.com/user-attachments/assets/6c78a598-1536-46d5-bd7a-87ccdb93289b" />
+
+
+
 ---
 # Attacker Setup (Kali Linux Attacker Configuration)
 - Hydra brute-force attack using common credentials
