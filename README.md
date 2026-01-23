@@ -107,7 +107,7 @@ Brute force is often the first step in major breaches.
 
 
  Detailed step-by-step documentation is available here: <a href="https://github.com/ChidoEfobi/Brute-Force-Attack-Detection-Using-Wazuh-Suricata/blob/main/Technical%20Reports/Brute%20Force%20Attack%20Report.md">Brute Force Attack Report</a>  
- Lab Architecture & Detection Flow is available here: <a href="https://github.com/ChidoEfobi/Brute-Force-Attack-Detection-Using-Wazuh-Suricata/blob/main/Technical%20Reports/Lab%20Architecture%20%26%20Detection%20Flow.txt">Brute Force Attach Architecture</a>  
+ Lab Architecture & Detection Flow is available here: <a href="https://github.com/ChidoEfobi/Brute-Force-Attack-Detection-Using-Wazuh-Suricata/blob/main/Technical%20Reports/Lab%20Architecture%20%26%20Detection%20Flow.txt">Brute Force Attack Architecture</a>  
 
 
  👤 Author
