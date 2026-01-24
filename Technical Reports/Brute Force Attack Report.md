@@ -12,7 +12,8 @@ By Chido Efobi
 
 
 # SOC Simulation Architecture & Configurations
-<img width="1024" height="1536" alt="SOC Lab Overview" src="https://github.com/user-attachments/assets/35d4fa3e-5e7f-4ad7-a828-7c50f3064a83" />
+---
+<img width="1024" height="1536" alt="Brute force attack simulation architecture" src="https://github.com/user-attachments/assets/d9fa2f06-a2d5-4d66-bf37-ff3876b436bc" />
 
 
 
