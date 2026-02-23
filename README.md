@@ -77,11 +77,11 @@ In this simulation, Wazuh:
 - Provides SIEM / IDR / XDR-style visibility
 
 # Lab Challenges Encountered (VMware Workstation)
-- ❌ A system cannot be both a Wazuh Server and Wazuh Agent
-- ⚠️ Suricata must be installed on the agent, not the server
-- 🔐 Incorrect rule file permissions prevent detection
-- 🌐 NAT vs Bridged networking impacts traffic visibility
-- ⏱️ Log ingestion timing affects correlation accuracy
+- A system cannot be both a Wazuh Server and Wazuh Agent
+- Suricata must be installed on the agent, not the server
+- Incorrect rule file permissions prevent detection
+- NAT vs Bridged networking impacts traffic visibility
+- Log ingestion timing affects correlation accuracy
 These challenges closely reflect real-world SOC deployment constraints.
 
 # Real-World Impact
