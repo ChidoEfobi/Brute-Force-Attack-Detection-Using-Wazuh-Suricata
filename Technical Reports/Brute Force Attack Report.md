@@ -91,45 +91,7 @@ Timeline graph: Attack attempts over time
 ---
 <img width="944" height="476" alt="wazuh server brute force output 4" src="https://github.com/user-attachments/assets/8210377f-52f8-4e20-8746-fbb9d5849288" />
 
----
 
-# Suricata Detection (IDS Detection: Suricata Alerts)
-Visual: Suricata alert log screenshot, Show timestamps and source IP
-
----
-
-# Threat Intelligence & Rules (Rule-Based Detection & Threat Intelligence)
-- Community-driven rules enable proactive detection
-Heading: 
-Visual: EMERGING THREATS rule snippet highlighted,Emphasize pattern recognition (SSH brute-force)
-
-----
-
-# Simulation Challenges (Lab Setup Observations)
-Visual: VMware network settings screenshot (NAT vs Bridged), Suricata permissions warning screenshot
-
-
-## Custom Detection & Automation
-
-In addition to Wazuh’s built-in detection rules, a custom Python script was developed to demonstrate
-how SOC analysts can automate log analysis and alert generation.
-
-The script analyzed the Linux authentication log (`/var/log/auth.log`) and identified repeated failed
-SSH login attempts from the same source IP address. When the number of failed attempts exceeded a
-defined threshold, the script generated an alert indicating a possible brute-force attack.
-
-This automation helped to:
-- Reduce manual log review
-- Quickly identify suspicious behavior
-- Correlate multiple failed login events into a single alert
-- Support faster incident triage and investigation
-
-The script acted as an additional detection layer, complementing Wazuh SIEM alerts and reinforcing
-defense-in-depth within the SOC workflow.
-
-![Python Detection Output](../screenshots/python_detection.png)
-
----
 
 ## Attack Summary & SOC Insights (Response & Mitigation)
 - Layered detection improves SOC effectiveness and visibility”
